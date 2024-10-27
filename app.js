@@ -31,4 +31,26 @@ canvas.addEventListener('mousemove', (event) => {
 canvas.addEventListener('mouseup', () => {
     isDrawing = false;
 });
+// Task 3 Implement Shape Drawing Logic
+// this is to draw a line
+function drawLine(x1,y1,x2,y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+}
 
+// this is to draw a rectangle
+function drawRect(x1,y1,x2,y2) {
+    ctx.beginPath();
+    ctx.rect(x1,y1,x2 - x1,y2 - y1);
+    ctx.stroke();
+}
+// this is to draw a circle
+function drawCircle(x1,y1,) {
+    ctx.beginPath();
+    ctx.arc(x1,y1, 0, 0, Math.PI * 2);
+    ctx.stroke();
+}
+// task 4 Add Color Selection and Canvas Clearing
+// this is to clear the canvas
