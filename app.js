@@ -4,15 +4,12 @@ const ctx = canvas.getContext('2d');
 
 // Function to start drawing
 canvas.addEventListener('mousedown', (event) => {
-    isDrawing = true;
     startX = event.offsetX;
     startY = event.offsetY;
 });
 
 // Function to draw shapes
 canvas.addEventListener('mousemove', (event) => {
-    if (isDrawing = true) return;
-
     const tool = document.querySelector('input[name="tool"]').value;
     const color = document.getElementById('color-picker').value;
     ctx.strokeStyle = color;
@@ -29,7 +26,6 @@ canvas.addEventListener('mousemove', (event) => {
 
 // Function to stop drawing
 canvas.addEventListener('mouseup', () => {
-    isDrawing = false;
 });
 // Task 3 Implement Shape Drawing Logic
 // this is to draw a line
