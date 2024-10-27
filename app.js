@@ -54,3 +54,6 @@ function drawCircle(x1,y1,) {
 }
 // task 4 Add Color Selection and Canvas Clearing
 // this is to clear the canvas
+document.getElementById('clear-canvas').addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
